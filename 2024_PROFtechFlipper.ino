@@ -91,11 +91,13 @@ void loop() {
   }
 
   u8g2.clearBuffer();  // clear the internal memory
-  if (!TeamNameSetupMode) {
-    display_PROscore();
-  } else {
-    display_PROscore_TeamName();
-  }
+
+  d_MainMenu();
+  // if (!TeamNameSetupMode) {
+  //   display_PROscore();
+  // } else {
+  //   display_PROscore_TeamName();
+  // }
 
   u8g2.sendBuffer();  // transfer internal memory to the display
 }
