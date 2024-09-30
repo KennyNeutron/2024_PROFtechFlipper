@@ -44,3 +44,5 @@ bool EndOfGame = false;
 
 //TeamNames
 bool TeamNameSetupMode = false;
+
+

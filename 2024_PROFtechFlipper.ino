@@ -24,6 +24,11 @@ bool RF_Avail = false;
 
 void setup() {
   Serial.begin(115200);
+  Serial.println("SYSTEM START....");
+  delay(2000);
+  
+  btn_Setup();
+
   u8g2.begin();
 
   if (!NRF.begin()) {
@@ -100,4 +105,7 @@ void loop() {
   // }
 
   u8g2.sendBuffer();  // transfer internal memory to the display
+
+
+  Serial.println("btn UP:" + String(status_btn_Up()));
 }
